@@ -23,7 +23,8 @@ window.onload = () => {
       loadPlaces(position.coords)
         .then(place => {
             console.log('test: ', position.coords);
-            console.log('test999 ');
+            console.log('test999 :', place.toString());
+            console.log('test998 :', place);
 
             const placeText = document.createElement('a-text');
             // placeText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
