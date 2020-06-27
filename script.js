@@ -49,6 +49,7 @@ window.onload = () => {
             testText.setAttribute('scale', '5 5 5');
 
             testText.addEventListener('loaded', () => {
+              console.log('in eventlistener');
               window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
             });
 
