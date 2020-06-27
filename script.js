@@ -23,13 +23,13 @@ window.onload = () => {
       loadPlaces(position.coords)
         .then(place => {
             console.log('test: ', position.coords);
-            console.log('tes333 ');
+            console.log('test999 ');
 
             const placeText = document.createElement('a-text');
             // placeText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
             placeText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
-            // placeText.setAttribute('value', place.toString());
-            placeText.setAttribute('value', "testTEXT");
+            placeText.setAttribute('value', place.toString());
+            // placeText.setAttribute('value', "testTEXT");
             placeText.setAttribute('look-at', "[gps-camera]");
             placeText.setAttribute('scale', '15 15 15');
 
