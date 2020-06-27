@@ -55,7 +55,7 @@ window.onload = () => {
           //
           //   scene.appendChild(placeText);
           // });
-        })
+
     },
     (err) => console.error('Error in retrieving position', err),
     {
