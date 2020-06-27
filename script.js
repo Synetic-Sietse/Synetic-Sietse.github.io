@@ -26,8 +26,8 @@ window.onload = () => {
             console.log('test666 :', place);
 
             const placeText = document.createElement('a-text');
-            placeText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
-            // placeText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
+            // placeText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
+            placeText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
             placeText.setAttribute('value', place.toString());
             placeText.setAttribute('look-at', "[gps-camera]");
             placeText.setAttribute('scale', '8 8 8');
