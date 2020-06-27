@@ -22,8 +22,8 @@ window.onload = () => {
       // than use it to load from remote APIs a fourword place nearby
       loadPlaces(position.coords)
         .then(place => {
-
-           const placeText = document.createElement('a-link');
+            console.log('hiero: ', place);
+            const placeText = document.createElement('a-link');
             placeText.setAttribute('gps-entity-place', `latitude: ${position.latitude}; longitude: ${position.longitude};`);
             placeText.setAttribute('title', place);
             placeText.setAttribute('scale', '15 15 15');
