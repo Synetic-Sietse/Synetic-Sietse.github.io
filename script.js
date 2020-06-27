@@ -23,7 +23,6 @@ window.onload = () => {
       loadPlaces(position.coords)
         .then(place => {
             console.log('test: ', position.coords);
-            console.log('test999 :', place.toString());
             console.log('test666 :', place);
 
             const placeText = document.createElement('a-text');
@@ -31,7 +30,7 @@ window.onload = () => {
             // placeText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
             placeText.setAttribute('value', place.toString());
             placeText.setAttribute('look-at', "[gps-camera]");
-            placeText.setAttribute('scale', '5 5 5');
+            placeText.setAttribute('scale', '8 8 8');
 
             placeText.addEventListener('loaded', () => {
               window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
