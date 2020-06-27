@@ -24,35 +24,35 @@ window.onload = () => {
         .then(place => {
             console.log('test: ', position.coords);
             console.log('test999 :', place.toString());
-            console.log('test1 :', place);
+            console.log('test2 :', place);
 
-            const placeText = document.createElement('a-text');
-            // placeText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
-            placeText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
-            placeText.setAttribute('value', place.toString());
-            // placeText.setAttribute('value', "testTEXT");
-            placeText.setAttribute('look-at', "[gps-camera]");
-            placeText.setAttribute('scale', '5 5 5');
+            // const placeText = document.createElement('a-text');
+            // // placeText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
+            // placeText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
+            // placeText.setAttribute('value', place.toString());
+            // // placeText.setAttribute('value', "testTEXT");
+            // placeText.setAttribute('look-at', "[gps-camera]");
+            // placeText.setAttribute('scale', '5 5 5');
+            //
+            // placeText.addEventListener('loaded', () => {
+            //   window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+            // });
+            //
+            // scene.appendChild(placeText);
 
-            placeText.addEventListener('loaded', () => {
+            const testText = document.createElement('a-text');
+            // testText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
+            testText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
+            testText.setAttribute('value', "Zomaar iets....");
+            // testText.setAttribute('value', "testTEXT");
+            testText.setAttribute('look-at', "[gps-camera]");
+            testText.setAttribute('scale', '5 5 5');
+
+            testText.addEventListener('loaded', () => {
               window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
             });
 
-            scene.appendChild(placeText);
-          //
-          //   const testText = document.createElement('a-text');
-          //   // testText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
-          //   testText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
-          //   testText.setAttribute('value', "Zomaar iets....");
-          //   // testText.setAttribute('value', "testTEXT");
-          //   testText.setAttribute('look-at', "[gps-camera]");
-          //   testText.setAttribute('scale', '5 5 5');
-          //
-          //   testText.addEventListener('loaded', () => {
-          //     window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-          //   });
-          //
-          //   scene.appendChild(testText);
+            scene.appendChild(testText);
           // });
 
 
