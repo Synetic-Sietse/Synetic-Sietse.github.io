@@ -22,13 +22,10 @@ window.onload = () => {
       // than use it to load from remote APIs a fourword place nearby
       loadPlaces(position.coords)
         .then(place => {
-            const latitude = place.location.lat;
-            const longitude = place.location.lng;
 
-            // add place name
-            const placeText = document.createElement('a-link');
-            placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-            placeText.setAttribute('title', place.name);
+           const placeText = document.createElement('a-link');
+            placeText.setAttribute('gps-entity-place', `latitude: ${position.latitude}; longitude: ${position.longitude};`);
+            placeText.setAttribute('title', place);
             placeText.setAttribute('scale', '15 15 15');
 
             placeText.addEventListener('loaded', () => {
