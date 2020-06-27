@@ -18,18 +18,14 @@ window.onload = () => {
 
   // first get current user location
   return navigator.geolocation.getCurrentPosition(function (position) {
-      const lat = position.latitude;
-      const lon = position.longitude;
 
       // than use it to load from remote APIs a fourword place nearby
       loadPlaces(position.coords)
         .then(place => {
-            console.log('lat: ', lat);
-            console.log('lon: ', lon);
             console.log('test: ', position.coords);
 
             const placeText = document.createElement('a-text');
-            placeText.setAttribute('gps-entity-place', `latitude: ${lat}; longitude: ${lon};`);
+            placeText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
             // placeText.setAttribute('title', place);
             placeText.setAttribute('value', place.toString());
             placeText.setAttribute('look-at', "[gps-camera]");
