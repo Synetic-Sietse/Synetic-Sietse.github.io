@@ -53,7 +53,7 @@ window.onload = () => {
           //   });
           //
           //   scene.appendChild(testText);
-          // });
+          });
 
 
           // places.forEach((place) => {
