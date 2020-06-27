@@ -21,9 +21,7 @@ window.onload = () => {
 
       // than use it to load from remote APIs a fourword place nearby
       loadPlaces(position.coords)
-        .then(places => {
-          // console.log('nou moe: ', places)
-          places.forEach((place) => {
+        .then(place => {
             const latitude = place.location.lat;
             const longitude = place.location.lng;
 
@@ -39,6 +37,24 @@ window.onload = () => {
 
             scene.appendChild(placeText);
           });
+
+
+          // places.forEach((place) => {
+          //   const latitude = place.location.lat;
+          //   const longitude = place.location.lng;
+          //
+          //   // add place name
+          //   const placeText = document.createElement('a-link');
+          //   placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+          //   placeText.setAttribute('title', place.name);
+          //   placeText.setAttribute('scale', '15 15 15');
+          //
+          //   placeText.addEventListener('loaded', () => {
+          //     window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+          //   });
+          //
+          //   scene.appendChild(placeText);
+          // });
         })
     },
     (err) => console.error('Error in retrieving position', err),
