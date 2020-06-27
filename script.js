@@ -1,7 +1,7 @@
 // getting places from APIs
 function loadPlaces(position) {
   // CORS Proxy to avoid CORS problems
-  const url = 'http://localhost:8080/';
+  const url = 'http://localhost:8080';
 
   // Foursquare API (limit param: number of maximum places to fetch)
   const endpoint = `${url}/api/${position.latitude},${position.longitude}`;
