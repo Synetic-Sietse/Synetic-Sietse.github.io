@@ -9,7 +9,7 @@ function loadPlaces(position) {
     .then((res) => {
       return res.json()
         .then((resp) => {
-          return resp.response.four;
+          return resp.four;
         })
     })
     .catch((err) => {
