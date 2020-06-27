@@ -23,10 +23,12 @@ window.onload = () => {
       loadPlaces(position.coords)
         .then(place => {
             console.log('hiero: ', place);
-            const placeText = document.createElement('a-link');
+
+            const placeText = document.createElement('a-text');
             placeText.setAttribute('gps-entity-place', `latitude: ${position.latitude}; longitude: ${position.longitude};`);
             // placeText.setAttribute('title', place);
-            placeText.setAttribute('title', 'zomaar test');
+            placeText.setAttribute('value', place);
+            placeText.setAttribute('look-at', "[gps-camera]");
             placeText.setAttribute('scale', '15 15 15');
 
             placeText.addEventListener('loaded', () => {
