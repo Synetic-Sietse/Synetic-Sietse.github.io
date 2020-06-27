@@ -24,36 +24,36 @@ window.onload = () => {
         .then(place => {
             console.log('test: ', position.coords);
             console.log('test999 :', place.toString());
-            console.log('test998 :', place);
+            console.log('test9 :', place);
 
-            const placeText = document.createElement('a-text');
-            // placeText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
-            placeText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
-            placeText.setAttribute('value', place.toString());
-            // placeText.setAttribute('value', "testTEXT");
-            placeText.setAttribute('look-at', "[gps-camera]");
-            placeText.setAttribute('scale', '15 15 15');
-
-            placeText.addEventListener('loaded', () => {
-              window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-            });
-
-            scene.appendChild(placeText);
-
-            const testText = document.createElement('a-text');
-            // testText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
-            testText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
-            testText.setAttribute('value', "Zomaar iets....");
-            // testText.setAttribute('value', "testTEXT");
-            testText.setAttribute('look-at', "[gps-camera]");
-            testText.setAttribute('scale', '5 5 5');
-
-            testText.addEventListener('loaded', () => {
-              window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-            });
-
-            scene.appendChild(testText);
-          });
+          //   const placeText = document.createElement('a-text');
+          //   // placeText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
+          //   placeText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
+          //   placeText.setAttribute('value', place.toString());
+          //   // placeText.setAttribute('value', "testTEXT");
+          //   placeText.setAttribute('look-at', "[gps-camera]");
+          //   placeText.setAttribute('scale', '15 15 15');
+          //
+          //   placeText.addEventListener('loaded', () => {
+          //     window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+          //   });
+          //
+          //   scene.appendChild(placeText);
+          //
+          //   const testText = document.createElement('a-text');
+          //   // testText.setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`);
+          //   testText.setAttribute('gps-entity-place', `latitude: 52.388610; longitude: 4.63720;`);
+          //   testText.setAttribute('value', "Zomaar iets....");
+          //   // testText.setAttribute('value', "testTEXT");
+          //   testText.setAttribute('look-at', "[gps-camera]");
+          //   testText.setAttribute('scale', '5 5 5');
+          //
+          //   testText.addEventListener('loaded', () => {
+          //     window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+          //   });
+          //
+          //   scene.appendChild(testText);
+          // });
 
 
           // places.forEach((place) => {
