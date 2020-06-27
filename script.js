@@ -25,7 +25,8 @@ window.onload = () => {
             console.log('hiero: ', place);
             const placeText = document.createElement('a-link');
             placeText.setAttribute('gps-entity-place', `latitude: ${position.latitude}; longitude: ${position.longitude};`);
-            placeText.setAttribute('title', place);
+            // placeText.setAttribute('title', place);
+            placeText.setAttribute('title', 'zomaar test');
             placeText.setAttribute('scale', '15 15 15');
 
             placeText.addEventListener('loaded', () => {
